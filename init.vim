@@ -15,6 +15,9 @@ colorscheme desert
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle')
+
+" include fzf
+set rtp+=~/.config/nvim/bundle/fzf/bin/
 "
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -23,6 +26,7 @@ Plugin 'w0rp/ale'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets.git'
 Plugin 'Shougo/deoplete.nvim'
+Plugin 'junegunn/fzf'
 
 "
 " " All of your Plugins must be added before the following line
@@ -141,6 +145,7 @@ noremap <UP> <NOP>
 noremap <DOWN> <NOP>
 noremap <RIGHT> <NOP>
 noremap <LEFT> <NOP>
+tnoremap <Esc> <C-\><C-n>
 "==================================================================
 "Macros
 "set the last signal as marker 's'
