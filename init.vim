@@ -27,6 +27,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets.git'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'junegunn/fzf'
+Plugin 'ludovicchabant/vim-gutentags'
 
 "
 " " All of your Plugins must be added before the following line
@@ -112,22 +113,12 @@ function! Inst_sigs(path)
    r./sigs.vhd                                                                                             
 endfunction 
 
-"Syntastic settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_vhdl_checkers = ['ghdl']
-" End syntastic settings
-
 :set rnu
 
 let mapleader="\<Space>"
-nnoremap <leader>c :!ctags -R $TCL_SVN
+nnoremap <leader>c <C-]>
+nnoremap <leader>b <C-T>
+nnoremap <leader>f :FZF<CR>
 nnoremap <leader>v :vsplit
 nnoremap <leader>t :Tab /
 nnoremap <leader>j Lzz
