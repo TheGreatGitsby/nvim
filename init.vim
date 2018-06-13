@@ -28,6 +28,7 @@ Plugin 'honza/vim-snippets.git'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'junegunn/fzf'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'tpope/vim-surround'
 
 "
 " " All of your Plugins must be added before the following line
@@ -123,6 +124,15 @@ nnoremap <leader>t :Tab /
 nnoremap <leader>j Lzz
 nnoremap <leader>k Hzz
 nnoremap <leader>i i_<esc>r
+"git merge conflict shortcuts
+"  Go to next conflict
+nnoremap <leader>gn /<<<<CR>
+"  Take both entries
+nnoremap <leader>gb dd/==<CR>dd/>>><CR>dd
+"  Take Theirs
+nnoremap <leader>gt dd/==<CR>V/>>><CR>d
+"  Take Mine
+nnoremap <leader>gm V/==<CR>d/>>><CR>dd
 "m doesnt work
 nnoremap <leader>I :call Inst("
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
