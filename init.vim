@@ -29,6 +29,7 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'junegunn/fzf'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular.git'
 
 "
 " " All of your Plugins must be added before the following line
