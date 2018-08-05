@@ -4,10 +4,10 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=3 smarttab
 
 :set foldmethod=marker
 
-au BufNewFile *.vhd 0r ~/.vim/template.vhd | let IndentStyle = "vhd"
+au BufNewFile *[^tb].vhd 0r ~/.vim/template.vhd | let IndentStyle = "vhd"
 au BufNewFile *_tb.vhd 0r ~/.vim/tb_template.vhd | let IndentStyle = "vhd"
 "find the last signal and mark it with 's'
-au BufNewFile,BufRead *.vhd :normal G?signalmsgg
+au BufNewFile,BufRead *[^pkg].vhd :normal G?signalmsgg
 
 "let g:solarized_termcolors=256
 "set background=dark
@@ -134,7 +134,13 @@ nnoremap <leader>gb dd/==<CR>dd/>>><CR>dd
 nnoremap <leader>gt dd/==<CR>V/>>><CR>d
 "  Take Mine
 nnoremap <leader>gm V/==<CR>d/>>><CR>dd
-"m doesnt work
+
+"   Navigate around
+nnoremap <leader>h 0
+nnoremap <leader><leader>h <C-w>h 
+nnoremap <leader>l $
+nnoremap <leader><leader>l <C-w>l 
+
 nnoremap <leader>I :call Inst("
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
